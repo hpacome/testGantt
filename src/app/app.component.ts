@@ -8,12 +8,13 @@ import { EditSettingsModel } from '@syncfusion/ej2-angular-gantt';
        `<ejs-gantt id="ganttDefault" height="430px" [dataSource]="data" [taskFields]="taskSettings"  [editSettings]="editSettings" [columns]="columns"></ejs-gantt>`,
     encapsulation: ViewEncapsulation.None
 })
-export class AppComponent{
+export class AppComponent {
     // Data for Gantt
-    public data: object[];
-    public taskSettings: object;
-    public columns: object[];
-    public editSettings: EditSettingsModel;
+    public data: object[] = [];
+    public taskSettings: object = {};
+    public columns: object[] = [];
+    public editSettings: EditSettingsModel = {};
+
     public ngOnInit(): void {
         this.data = [
             {
